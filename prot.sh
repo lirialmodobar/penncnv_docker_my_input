@@ -1,13 +1,11 @@
 #!/bin/bash
-WD=/path/to/your/working/dir #pwd?the one in which you cloned this repo
-mkdir $WD/input #add an if not or put it in repo, how to samples
-mkdir $WD/output #add an if not or put it in repo
-#penncnv_dir here somehow, with the config
-#see if script can start here, add obs to put the samples in the input dir
-#scp to input dir or cp
+WD=/path/to/cloned/repo
+mkdir $WD/input #if it doesnt exist
+mkdir $WD/output #if it doesnt exist
+#scp to input dir or cp, whichever way you need to put the samples in the input folder
 ls $WD/input > $WD/samples.txt
 while read samples; do
-	cut -f n,n,n $WD/$samples > $WD/$samples
+	cut -f 1,4,5 $WD/$samples | sed -i 's/ID/Name/g' > $WD/$samples
 done < $WD/samples.txt
 rm $WD/samples.txt
 docker pull genomicslab/penncnv
