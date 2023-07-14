@@ -87,6 +87,7 @@ The above is the proper way to call it, and the one thing that should change in 
 $WD/penncnv_pipeline/PennCNV_pipeline_UserGuide.pdf
 ```
 If you need any more information regarding the PennCNV pipeline, I recommend reading the [PennCNV website](https://penncnv.openbioinformatics.org/en/latest/user-guide/input/).
+
 **Final note:** I'm not sure if QS can be run properly with only one sample, and as far as I can tell, it can't, but I haven't fully tested this hypothesis. The number of samples needed seems to vary: if you run specific combinations of samples from the example, you can even run it with only 2 samples, while in other cases it will require 3 or more, I didn't quite figure this part out.  If you find only NaN in the QS column, the only way I know to fix this is to add more samples, but I don't know how many or which ones. So, basically, I recommend you run all this with only one sample to see if you don't find any errors until you reach the wrong qs column output, not worrying about the NaNs in there. Once you're sure everything up to this point is alright, run it with all your available samples. That would be the safest way I know to prevent this problem.
 
 ## Doubts?
