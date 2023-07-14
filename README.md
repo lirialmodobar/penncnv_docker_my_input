@@ -40,7 +40,7 @@ If you need to make any more changes, adequate them in the script. If you have a
 WD=/path/to/cloned/repo
 [ ! -d "$WD/input" ] && mkdir "$WD/input"
 [ ! -d "$WD/output" ] && mkdir "$WD/output"
-cp /path/to/dir/where/your/input/is/* $WD/input #or replace with whatever operation you need to put the samples in the input dir
+cp /path/to/dir/where/your/input/is/* $WD/input #replace with whatever operation you need to put the samples in the input dir
 mv /path/to/pfb/file $WD #replace with whatever operation you need to put the pfb file in the WD
 docker pull genomicslab/penncnv
 docker run -it -v $WD:/home/user/mounted genomicslab/penncnv
