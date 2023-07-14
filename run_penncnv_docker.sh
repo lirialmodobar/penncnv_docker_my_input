@@ -1,6 +1,7 @@
 #!/bin/bash
 #inside docker
 WD=/home/user/mounted
+chmod 777 $WD
 Rscript $WD/install_necessary_packages.R
 cd $WD/penncnv_pipeline
 bash CNV_detection.sh Config_default.txt
