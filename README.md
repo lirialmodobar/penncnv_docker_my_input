@@ -54,7 +54,7 @@ cd /home/mounted/user
 bash run_penncnv_docker.sh 
 ```
 The run_penncnv_docker.sh script will call an R script to install the packages that penncnv requires. Since they're not included in the image, this is a mandatory step of the script, make no changes here. It will also run the penncnv pipeline with the config file provided in this repo (it doesn't run the association part - again, you can change this in the config if you'd like) and save a table with the cnv and qs data.
-The provided config file looks like this
+The provided config file looks like this and must be tab separated
 ```sh
 pennCNVpath:    /home/user/PennCNV
 HMMpath:        /home/user/PennCNV/lib/hhall.hmm 
